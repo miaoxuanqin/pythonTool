@@ -106,7 +106,10 @@ def insert_to_word(word_path, data_map):
 
 if __name__ == "__main__":
     # 请确保路径正确
-    TXT_FILE = r'D:\DESKTOP\txt.txt'
-    WORD_FILE = r'D:\DESKTOP\分工.docx'
+    # TXT_FILE = r'D:\DESKTOP\txt.txt'
+    # WORD_FILE = r'D:\DESKTOP\分工.docx'
+
+    TXT_FILE = r'G:\UserDirectory\txt.txt'
+    WORD_FILE = r'G:\UserDirectory\分工.docx'
 
     insert_to_word(WORD_FILE, process_txt(TXT_FILE))
