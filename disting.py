@@ -75,3 +75,5 @@ if __name__ == "__main__":
         rename_duplicates_with_numbers(input_file, output_file)
     except Exception as e:
         print(f"运行出错: {e}")
+
+        # pick1
