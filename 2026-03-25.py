@@ -5,7 +5,7 @@ from docx import Document
 
 def main():
     txt_path = r"D:\DESKTOP\txt.txt"
-    docx_path = r"D:\DESKTOP\分工.docx"
+    docx_path = r"D:\DESKTOP\目录 模板 苗 内容空白.docx"
     output_path = r"D:\DESKTOP\分工_自动编号最终版.docx"
 
     if not os.path.exists(docx_path):
@@ -36,7 +36,7 @@ def main():
 
     # 2. 定位锚点
     target_idx = -1
-    keyword = "技术路线（苗）"
+    keyword = "系统概述"
     for i, p in enumerate(doc.paragraphs):
         if keyword in p.text.replace(" ", ""):
             target_idx = i
