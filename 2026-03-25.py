@@ -36,7 +36,7 @@ def main():
 
     # 2. 定位锚点
     target_idx = -1
-    keyword = "交通运输行业数据共享交换情况监测--苗泫钦"
+    keyword = "技术路线（苗）"
     for i, p in enumerate(doc.paragraphs):
         if keyword in p.text.replace(" ", ""):
             target_idx = i
