@@ -35,5 +35,5 @@ def read_titles_with_numbers(file_path):
 
 
 # 执行读取
-path = r'D:\DESKTOP\目录 模板 苗 内容空白.docx'
+path = r'D:\DESKTOP\模板 目录 全部_仅留标题.docx'
 read_titles_with_numbers(path)
