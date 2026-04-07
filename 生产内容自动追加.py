@@ -30,7 +30,8 @@ def process_txt_to_word_formatted(txt_path, docx_path, output_path):
 
         if header_match:
             dots_sequence = header_match.group(1)
-            level = dots_sequence.count('.')
+            # 通过分割点号来计算数字的个数
+            level = len(dots_sequence.split('.'))
             clean_title_text = header_match.group(2).strip()
 
             if not clean_title_text:
