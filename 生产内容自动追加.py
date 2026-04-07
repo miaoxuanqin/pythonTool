@@ -26,7 +26,7 @@ def process_txt_to_word_formatted(txt_path, docx_path, output_path):
             continue
 
         # 匹配标题行：以 # 开头，提取编号后的文字
-        header_match = re.match(r'^#\s*([\d\.]+)\s*(.*)', line)
+        header_match = re.match(r'^#*\s*([\d\.]+)\s*(.*)', line)
 
         if header_match:
             dots_sequence = header_match.group(1)
@@ -67,7 +67,7 @@ def process_txt_to_word_formatted(txt_path, docx_path, output_path):
 
 # --- 配置路径 ---
 txt_file = r'D:\DESKTOP\txt.txt'
-template_file = r'D:\DESKTOP\目录 模板 苗 内容空白.docx'
+template_file = r'D:\DESKTOP\目录.docx'
 output_file = r'D:\DESKTOP\生成追加.docx'
 
 # 执行
