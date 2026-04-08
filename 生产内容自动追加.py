@@ -26,12 +26,12 @@ def process_txt_to_word_formatted(txt_path, docx_path, output_path):
             continue
 
         # 匹配标题行：以 # 开头，提取编号后的文字
-        header_match = re.match(r'^#*\s*([\d\.]+)\s*(.*)', line)
+        header_match = re.match(r'^#+\s*([\d\.]+)\s*(.*)', line)
 
         if header_match:
             dots_sequence = header_match.group(1)
-            # 通过分割点号来计算数字的个数
-            level = len(dots_sequence.split('.'))
+            # 通过计算数字的个数来确定层级（统计所有数字字符）
+            level = len(re.findall(r'\d+', dots_sequence))
             clean_title_text = header_match.group(2).strip()
 
             if not clean_title_text:

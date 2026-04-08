@@ -44,7 +44,7 @@ def process_excel_to_word(excel_path, word_path, output_path):
     # 遍历文档寻找锚点和样板样式
     for para in doc.paragraphs:
         text = para.text.strip()
-        if "功能设计" == text:
+        if "平台对接（苗）" == text:
             anchor_para = para
         elif "5级标题" == text:
             style_objects[5] = para.style
@@ -115,7 +115,7 @@ def process_excel_to_word(excel_path, word_path, output_path):
 if __name__ == "__main__":
     # 请根据实际环境确认路径
     config = {
-        "excel": r"D:\DESKTOP\目录.xlsx",
+        "excel": r"D:\DESKTOP\海易办及平台对接清单.xlsx",
         "word": r"D:\DESKTOP\模板.docx",
         "output": r"D:\DESKTOP\模板_已更新.docx"
     }
